@@ -1,0 +1,17 @@
+# Kho định vị phần tử. Đổi website chỉ cần sửa file này, không sửa code.
+# Tiền tố: css= | xpath= | id= | name=   (không ghi -> css)
+
+# --- Trang đăng nhập (đã xác nhận từ HTML của trang) ---
+signin.email:    'input[name="email"]'
+signin.password: 'input[name="password"]'
+signin.submit:   'button[type="submit"]'
+
+# --- Thanh header ---
+header.login_button: 'a[href="/signin"] button, a[href="/signin"]'
+
+# --- CHƯA XÁC NHẬN: cần kiểm tra bằng Inspect rồi chỉnh lại ---
+# Thông báo lỗi khi đăng nhập sai (Chakra UI thường dùng toast/alert)
+error.message: '.chakra-alert, [role="alert"], [role="status"], .chakra-form__error-message'
+
+# Nút Logout sau khi đăng nhập (có thể nằm trong menu)
+nav.logout: 'xpath=//*[self::button or self::a or self::p or self::span][contains(translate(normalize-space(.), "ABCDEFGHIJKLMNOPQRSTUVWXYZ", "abcdefghijklmnopqrstuvwxyz"), "logout") or contains(normalize-space(.), "Đăng xuất")]'

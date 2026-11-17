@@ -1,0 +1,11 @@
+base_url: https://e-commerce-for-testing.onrender.com
+browser: chrome          # chrome | firefox | edge
+headless: false
+timeouts:
+  page_load: 90          # giây - Render gói miễn phí có thể khởi động chậm
+  element: 25            # giây - chờ phần tử xuất hiện / phản hồi (phù hợp cho web load chậm)
+message_locator: error.message   # locator dùng để ghi lại thông báo hiển thị vào Actual Result
+paths:
+  testcases: testcases/login_keywords.xlsx
+  locators: locators.yaml
+  reports: reports
